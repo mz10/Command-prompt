@@ -1,0 +1,57 @@
+﻿<Application x:Class="Spoustec.App"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	StartupUri="Window1.xaml">
+<Application.Resources>
+    <Style x:Key='Rounded' TargetType='Border'>
+      <Setter Property='Background' Value='#66FFFFFF' />
+      <Setter Property='CornerRadius' Value='10' />
+      <Setter Property='BorderThickness' Value='2' />
+      <Setter Property='BorderBrush' Value='DarkGray' />
+    </Style>
+
+	<Style 
+		TargetType="TextBox" 
+		xmlns:sys="clr-namespace:System;assembly=mscorlib"
+		x:Key='TextBoxStyl'>
+		<Style.Resources>
+			<VisualBrush
+				x:Key="pozadi"
+				AlignmentX="Left"
+				AlignmentY="Center"
+				Stretch="None">
+				<VisualBrush.Visual>
+					<TextBlock
+						Text="Hovno"
+						Padding="4,0,0,0"
+						Foreground="Gray"
+						Background="Blue" 
+						Width="200"/>
+				</VisualBrush.Visual>
+			</VisualBrush>
+		</Style.Resources>
+		<Style.Triggers>
+			<Trigger
+				Property="Text"
+				Value="{x:Static sys:String.Empty}">
+				<Setter
+					Property="Background"
+					Value="{StaticResource pozadi}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+    <Style TargetType="TextBox" x:Key="moje">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource Mode=Self}}" Value="">
+                <Setter Property="TextBox.Background">
+                    <Setter.Value>
+                        <VisualBrush Stretch="None" Visual="{Binding ElementName=hintText}"/>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>	
+	
+  </Application.Resources>
+</Application>
