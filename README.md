@@ -1,19 +1,21 @@
 ﻿Příkazový řádek s průzkumníkem, možnost automatického ukládání do souboru, spouštění několika příkazů po sobě, průhledné okno (Windows 7), automatické vypnutí PC po ukončení, ...
 
-# Nápověda:
-## Horní lišta - tlačítka:
+[Download](https://github.com/mz10/Command-prompt/blob/master/Spoustec/bin/Release/Spoustec.exe?raw=true)
+
+# Nápověda
+## Horní lišta - tlačítka
 * Zkopírovat - zkopíruje výstup do schránky
 * Přerušit - ukončí  program
 * Počet opakování - vpravo (tolikrát se provede zadaný příkaz)
 
-## Lišta pro zadání příkazu:
+## Lišta pro zadání příkazu
 * CTRL - otevře nabídku příkazů
-* Cesta s mezerou nemusí být v "
+* Cesta s mezerou nemusí být v ""
 
 ## Průzkumník:
 * Filtr - zobrazení jen některých přípon - např zadat: jpg mp3
 
-## Proměnné u otevřeného souboru:
+## Proměnné u otevřeného souboru
 * §sl = cesta k souboru
 * §cn = cesta bez přípony
 * §c = celá cesta
@@ -23,7 +25,7 @@
 * §n = název souboru
 * Jméno souboru se použije ze zatrhlých položek nebo z vlastního seznamu.
 
-## Příkazy:
+## Příkazy
 * zprava text - vypíše text do okna
 * napis text - vypíše text na řádek, = echo, ale rychlejší
 * exit - ukončí program
@@ -33,14 +35,14 @@
 
 # Další příkazy - většina funguje z CMD
 
-## Další proměnné:
+## Další proměnné
 * §cd = aktuální cesta
 * §i = počítadlo
 
-### např. zadat:
+### např. zadat
 * echo §i
 * napis §i
 
-* Windows 10 nepodporuje průhlednost okna.
-* Nastavení je uloženo tady:
+### Windows 10 nepodporuje průhlednost okna
+###  Nastavení je uloženo tady
 * %APPDATA%/Spoustec/
